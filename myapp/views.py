@@ -18,14 +18,18 @@ def about(request):
 
 # ----------------------------------TODO -----------------------------------
 def todo(request):
- 
+
+    user = request.user
+
+    print(user.username)
+
     result = Todo.objects.filter(is_completed = False)
 
-    task_count = result.count()
+
 
 
     parameters = {
-        "result" : result , 'task_count' : task_count ,  
+        "result" : result , "user" : user
     }
 
     return render(request , "todo.html" , parameters)  
@@ -111,7 +115,13 @@ def upload_profile(request):
 
         return redirect("todo")
 
-    return render(request, "upload_profile.html")
+    image = Profile.objects.get(id = 5)
+
+    parameters = {
+        "image": image
+    }
+
+    return render(request, "upload_profile.html", parameters)
 
 
     
