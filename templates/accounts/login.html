@@ -9,7 +9,12 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa;
+            background-image: url('https://www.shutterstock.com/shutterstock/photos/1881715708/display_1500/stock-vector-blush-pink-watercolor-fluid-painting-vector-design-card-dusty-rose-and-golden-marble-geode-frame-1881715708.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
         }
 
@@ -51,9 +56,10 @@
 </head>
 
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">ToDo App</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="opacity: 90%;">
+        <a class="navbar-brand" href="{% url 'home' %}" style="font-size: x-large; color: rgb(255, 255, 255);">
+            <img src="https://tasktide.co/wp-content/uploads/2024/01/cropped-tasktide-01.png" alt="Logo"
+                style="height: 40px; margin-right: 5px;"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -61,7 +67,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    <a class="btn btn-primary" href="{% url 'home' %}">Home</a>
                 </li>
             </ul>
         </div>
@@ -86,13 +92,13 @@
             <button type="submit" class="btn btn-primary btn-login">Login</button>
         </form>
 
-        
+
         <p class="mt-1">
             <a href="#">Forget Password?</a>
         </p>
         <div class="footer">
             <p>Don't have an account?
-                <a href="{% url 'register' %}">Register Here</a>
+                <a href="{% url 'register' %}">Signup Here</a>
             </p>
         </div>
     </div>
