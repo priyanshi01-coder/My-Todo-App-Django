@@ -24,7 +24,7 @@ def register(request):
     if request.method == "POST":
         input_username = request.POST.get("username")
         input_password = request.POST.get("password")
-
+ 
         new_user = User(
             username = input_username
         )
@@ -36,5 +36,13 @@ def register(request):
         return redirect("login")
 
     return render(request, "accounts/register.html")
+
+
+def logout(request):
+
+    auth.logout(request)
+    
+    return redirect("login")
+
 
 

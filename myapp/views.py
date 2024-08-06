@@ -23,7 +23,7 @@ def todo(request):
 
     print(user.username)
 
-    result = Todo.objects.filter(is_completed = False)
+    result = Todo.objects.filter(is_completed = False , user = user )
 
 
 
@@ -44,6 +44,7 @@ def add_todo(request):
         user_created_at = request.POST.get("created_at")
 
         new_todo = Todo(
+        user = request.user ,
         task= user_task ,
         created_at = user_created_at , 
         is_completed = False)
