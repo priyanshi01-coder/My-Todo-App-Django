@@ -17,8 +17,8 @@ class Todo(models.Model):
 class Profile(models.Model):
     title = models.CharField(max_length=30)
     profile_pic = models.ImageField(upload_to="profile_pic/")
-    # gender = models.CharField(max_length=10)
     
 
 
 
+# Data Redundency

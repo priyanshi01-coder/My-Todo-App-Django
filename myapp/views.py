@@ -26,8 +26,6 @@ def todo(request):
     result = Todo.objects.filter(is_completed = False , user = user )
 
 
-
-
     parameters = {
         "result" : result , "user" : user
     }

@@ -29,7 +29,7 @@
             <img src="https://tasktide.co/wp-content/uploads/2024/01/cropped-tasktide-01.png" alt="Logo"
                 style="height: 40px; margin-right: 5px;"></a>
 
-        <a class="navbar-brand" href="#">Welcome <strong>{{ user.username }}! </strong></a>
+        <a class="navbar-brand" href="#"><b> Welcome </b><strong>{{ user.username }} ! </strong></a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,8 +44,7 @@
 
                     <a class="btn btn-warning" href="{% url 'about' %}  " style="font-size: large; color: black;"><b><u> About </u></b></a>
 
-                    <a class="btn btn-primary" href="{% url 'home' %}" style="font-size: large; color: black;"><b><u> Home </u></b></a>
-                </li>
+                    <a class="btn btn-primary" href="{% url 'home' %}" style="font-size: large; color: black;"><b><u> Home </u></b></a> </li>
             </ul>
         </div>
     </nav>
