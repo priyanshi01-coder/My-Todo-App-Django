@@ -123,6 +123,8 @@ def upload_profile(request):
     return render(request, "upload_profile.html", parameters)
 
 
+
+
     
 
 

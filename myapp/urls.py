@@ -5,9 +5,6 @@ from django.conf import settings
 
 from . import views 
 
-
-
-
 urlpatterns= [
 
     path("",views.home , name = "home"),
@@ -27,7 +24,3 @@ urlpatterns= [
     path("upload_profile/", views.upload_profile, name="upload_profile"),
 
 ] + static(settings.MEDIA_URL , document_root = settings.MEDIA_ROOT)
-
-
-
- 
